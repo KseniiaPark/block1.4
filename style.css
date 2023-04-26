@@ -1,0 +1,189 @@
+/* COMMON */
+@font-face {
+  font-family: 'TT Lakes Regular';
+  src: url('TTLakes-Regular.eot');
+  src: url('TTLakes-Regular.eot?#iefix') format('embedded-opentype'),
+  url('TTLakes-Regular.woff') format('woff'),
+  url('TTLakes-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  li{
+    list-style-type: none;
+  }
+
+  .font{
+    font-family: 'TT Lakes Regular';
+  }
+
+/*BURGER*/
+.burger-menu{
+  width:320px;
+}
+
+  .menu-btn{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 23px;
+    left: 24px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 1;
+    background-color:#FF3E79;
+    border-radius: 50%;
+  }
+
+  .menu-btn > span,
+  .menu-btn > span::before,
+  .menu-btn > span::after {
+    display: block;
+    position: absolute;
+    left:10%;
+    height: 2px;
+    background-color: #FFFFFF;
+    transition-duration: .25s;
+  }
+  .menu-btn > span{
+    width: 15px;
+  }
+  .menu-btn > span::before {
+    content: '';
+    top: -8px;
+    width: 150%;
+  }
+  .menu-btn > span::after {
+    content: '';
+    top: 8px;
+    width: 140%;
+  }
+
+  .menubox{
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
+    width:320px;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    background-color: #FFFFFF;
+    box-shadow: 16px 50px 50px #0E185033;
+    transition-duration: .25s;
+  }
+
+  .menu-item {
+    display: block;
+    padding: 12px 10px;
+    color: black;
+    font-family: 'TT Lakes Regular';
+    font-size: 16px;
+    height: 24px;
+    transition-duration: .5s;
+  }
+
+  .menu-item:hover,
+  .menu-item:focus{
+  color: #7E7E82;
+  font-size: 14px;
+  }
+
+  #menu-toggle{
+    opacity: 0;
+  }
+
+  #menu-toggle:checked ~ .menu-btn > span{
+    transform: rotate(45deg);
+    position: absolute;
+    left:20%;
+    top:35%;
+  }
+  #menu-toggle:checked ~ .menu-btn > span::before{
+    top: 0;
+    transform: rotate(0);
+  }
+  #menu-toggle:checked ~ .menu-btn > span::after{
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menu-toggle:checked ~ .menubox{
+    visibility: visible;
+    left: 0;
+  }
+
+/*HEADER*/
+.logo{
+  position: absolute;
+  top: 23px;
+  left: 80px;
+  Width:97px;  
+}
+
+.sourch--position{
+  position: absolute;
+  top: 23px;
+  right: 30px; 
+}
+
+/*FOOTER*/
+.contact{
+  display: flex;
+  position: absolute;
+  bottom:38%;
+}
+.contact_icon{
+  margin-right: 20px;
+}
+
+
+.mail--position{
+  position: absolute;
+  left:5%;
+  bottom:35%;
+  color: #1B1C21;
+  font-size: 16px;
+}
+
+.phone{
+  color: #1B1C21;
+  font-size: 24px;
+  position: absolute;
+  left:5%;
+  bottom:30%;
+}
+
+.translate_lang{
+  color: #1B1C21;
+  font-size: 24px;
+}
+
+.translate_lang:hover,
+.translate_lang:focus{
+color: #7E7E82;
+}
+
+.lang_ru{
+  position: absolute;
+  left: 3.12%;
+  bottom:20%;
+}
+
+.lang_en{
+  position: absolute;
+  left: 20%;
+  bottom:20%;
+}
+
+.lang_ch{
+  position: absolute;
+  left: 40%;
+  bottom:20%;
+}
